@@ -6,7 +6,8 @@ var cmd = require('./command.js'),
     commandLocalMock = require('./commandLocalMock.js'),
     redisCommand = require('./redisCommand.js').redisCommand,
     k8sCommand = require('./kubernetes/k8sCommand.js').k8sCommand,
-    bojK8sCommand = require('./kubernetes/bojK8sCommand.js').bojK8sCommand;
+    bojK8sCommand = require('./kubernetes/bojK8sCommand.js').bojK8sCommand,
+    httpCommand = require('./httpCommand.js').httpCommand;
 
 function print(ins, outs, context, cb) {
     console.log("Running task", context.name, "(" + context.taskId + ")")
@@ -191,3 +192,4 @@ exports.commandLocalMock = commandLocalMock.commandLocalMock;
 exports.redisCommand = redisCommand;
 exports.k8sCommand = k8sCommand;
 exports.bojK8sCommand = bojK8sCommand;
+exports.httpCommand = httpCommand;
