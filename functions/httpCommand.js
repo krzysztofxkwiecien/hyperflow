@@ -3,7 +3,7 @@ const createJobMessage = require('../common/jobMessage').createJobMessage;
 
 async function httpCommand(ins, outs, context, cb) {
 
-    let jobMessage = JSON.stringify(createJobMessage(ins, outs, context, cb));
+    let jobMessage = JSON.stringify(createJobMessage(ins, outs, context));
 
     console.log("Sending jobMessage: " + jobMessage);
 
